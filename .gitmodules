@@ -1,0 +1,6 @@
+[submodule "common/z"]
+	path = common/z
+	url = https://github.com/rupa/z.git
+[submodule "common/git-aware-prompt"]
+	path = common/git-aware-prompt
+	url = https://github.com/jimeh/git-aware-prompt.git
