@@ -1,7 +1,7 @@
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 
 # Homebrew
-export PATH=/usr/local/bin:$PATH
+export PATH=$PATH:/usr/local/bin:/opt/homebrew/bin
 
 # Git completion (Doesn't work anymore? maxOS Big Sur)
 # if [ -f ${SCRIPT_DIR}/.git-completion.bash ]; then
