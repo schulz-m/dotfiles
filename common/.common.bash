@@ -9,3 +9,8 @@ alias ll='ls -lh'
 
 # Utilities
 source ${SCRIPT_DIR}/.git.bash
+
+# Python Functions
+function jupyter-kernel-install() {
+  python -m ipykernel install --user --name=$1
+}
