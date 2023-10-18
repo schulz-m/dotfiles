@@ -3,11 +3,6 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 # Homebrew
 export PATH=$PATH:/usr/local/bin:/opt/homebrew/bin
 
-# Git completion (Doesn't work anymore? maxOS Big Sur)
-# if [ -f ${SCRIPT_DIR}/.git-completion.bash ]; then
-#   . ${SCRIPT_DIR}/.git-completion.bash
-# fi
-
 # Brew bash completion - installed via brew install bash-completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
