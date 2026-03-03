@@ -10,7 +10,7 @@ fi
 
 # Bash aliases helpers
 alias l='ls'
-alias ll='ls -lh'
+alias ll='ls -lah'
 
 # Directory jump with Z Shell, taken from https://github.com/rupa/z
 . ${SCRIPT_DIR}/z/z.sh
