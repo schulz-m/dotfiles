@@ -15,6 +15,8 @@ fi
 # Bash aliases helpers
 alias l='ls'
 alias ll='ls -lah --color=auto'
+## Pretty print the PATH
+alias path='echo; tr ":" "\n" <<< "$PATH"; echo;'
 
 # Directory jump with Z Shell, taken from https://github.com/rupa/z
 . ${SCRIPT_DIR}/z/z.sh
