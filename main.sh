@@ -8,17 +8,11 @@ else
     exit 1
 fi
 
-# Bash aliases helpers
-alias l='ls'
-alias ll='ls -lh'
 
-# Directory jump with Z Shell, taken from https://github.com/rupa/z
-. ${SCRIPT_DIR}/z/z.sh
+os_type="$(uname -s)"
 
-# Utilities
-source ${SCRIPT_DIR}/.git.bash
-
-# Python Functions
-function jupyter-kernel-install() {
-  python -m ipykernel install --user --name=$1
-}
+if [[ "$os_type" == "Darwin" ]]; then
+	source "$SCRIPT_DIR/macOS/profile.sh"
+else
+	source "$SCRIPT_DIR/debian/profile.sh"
+fi
