@@ -1,8 +1,12 @@
 # Assign script directory depending on the shell type (bash or zsh)
 if [ -n "$BASH_VERSION" ]; then
     SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
+    alias source_shell="source ~/.bashrc"
 elif [ -n "$ZSH_VERSION" ]; then
     SCRIPT_DIR="$( cd "$( dirname "${(%):-%N}" )" >/dev/null 2>&1 && pwd )"
+
+    alias source_shell="source ~/.zshrc"
 else
     echo "Unknown shell type"
     exit 1
@@ -10,7 +14,7 @@ fi
 
 # Bash aliases helpers
 alias l='ls'
-alias ll='ls -lah'
+alias ll='ls -lah --color=auto'
 
 # Directory jump with Z Shell, taken from https://github.com/rupa/z
 . ${SCRIPT_DIR}/z/z.sh

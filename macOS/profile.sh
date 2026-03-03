@@ -22,6 +22,10 @@ else
     exit 1
 fi
 
+# Color listing outputs
+export CLICOLOR=1
+export LSCOLORS="dxfxcxdxbxegedabagacad"
+
 # Homebrew
 export PATH=$PATH:/usr/local/bin:/opt/homebrew/bin
 
