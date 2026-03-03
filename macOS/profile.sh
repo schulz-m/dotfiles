@@ -4,6 +4,8 @@ if [ -n "$BASH_VERSION" ]; then
 
     # Bash prompt settings
     export PS1="\u:\W \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
+    # Set up fzf key bindings and fuzzy completion
+    eval "$(fzf --bash)"
 elif [ -n "$ZSH_VERSION" ]; then
     SCRIPT_DIR="$( cd "$( dirname "${(%):-%N}" )" >/dev/null 2>&1 && pwd )"
 
@@ -17,6 +19,9 @@ elif [ -n "$ZSH_VERSION" ]; then
     # Zsh prompt settings
     setopt PROMPT_SUBST
     PROMPT='%F{green}%n@%m%f:%F{blue}%~%f ${vcs_info_msg_0_}%# '
+
+    # Set up fzf key bindings and fuzzy completion
+    source <(fzf --zsh)
 else
     echo "Unknown shell type"
     exit 1
