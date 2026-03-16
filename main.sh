@@ -12,7 +12,7 @@ fi
 os_type="$(uname -s)"
 
 if [[ "$os_type" == "Darwin" ]]; then
-	source "$SCRIPT_DIR/macOS/profile.sh"
+	source "${SCRIPT_DIR}/macOS/profile.sh"
 else
-	source "$SCRIPT_DIR/debian/profile.sh"
+	source "${SCRIPT_DIR}/debian/profile.sh"
 fi

@@ -4,3 +4,6 @@
 [submodule "common/git-aware-prompt"]
 	path = common/git-aware-prompt
 	url = https://github.com/jimeh/git-aware-prompt.git
+[submodule "debian/tmux"]
+	path = debian/tmux
+	url = https://github.com/gpakosz/.tmux.git
